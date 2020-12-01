@@ -1,12 +1,12 @@
-Source: openocd-gw
+Source: openocd-git
 Section: main
 Priority: extra
-Maintainer: Franz Levin <frazz@kryo.se>
+Maintainer: Docker Build Bot <docker@localhost>
 Build-Depends: debhelper, git, texinfo, pkg-config, libusb-dev, libusb-1.0-0-dev, libusb-dev, libhidapi-dev, libftdi-dev, libftdi1-dev
 
-Package: openocd-gw
+Package: openocd-git
 Architecture: any
 Depends: libusb-0.1-4, libusb-1.0-0, libftdi1, libftdi1-2, libhidapi-hidraw0
-Description: OpenOCD GW
- OpenOCD GW
+Description: OpenOCD GIT
+ OpenOCD GIT
 

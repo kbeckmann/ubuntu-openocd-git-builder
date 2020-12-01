@@ -1,0 +1,28 @@
+name: Builder
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 2 * * *"
+
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+          docker pull 'docker.pkg.github.com/kbeckmann/ubuntubuilder/ubuntubuilder'
+          docker tag docker.pkg.github.com/kbeckmann/ubuntubuilder/ubuntubuilder:latest ubuntubuilder
+          docker run --rm ubuntubuilder ./build.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+            name: openocd-git
+            path: openocd-git*.deb

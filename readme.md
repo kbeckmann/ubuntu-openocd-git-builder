@@ -6,14 +6,14 @@ sudo apt-get install build-essential debhelper devscripts
 ## Step packet version
 
 ```
-cd openocd-gw
+cd openocd-git
 dch -v '<new version number>'
 dch -r
 ```
 
 ## Build a deb files
 ```
-cd openocd-gw
+cd openocd-git
 dpkg-buildpackage --no-sign -j<job number>
 ```
 

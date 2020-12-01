@@ -1,12 +1,12 @@
-openocd-gw/openocd
-openocd-gw/game-and-watch-backup
-openocd-gw/debian/openocd-gw*
-openocd-gw/debian/files
-openocd-gw/debian/.debhelper
-openocd-gw_*.buildinfo
-openocd-gw_*.changes
-openocd-gw_*.deb
-openocd-gw_*.dsc
-openocd-gw_*.tar.gz
-openocd-gw-*.ddeb
+openocd-git/openocd
+openocd-git/game-and-watch-backup
+openocd-git/debian/openocd-git*
+openocd-git/debian/files
+openocd-git/debian/.debhelper
+openocd-git_*.buildinfo
+openocd-git_*.changes
+openocd-git_*.deb
+openocd-git_*.dsc
+openocd-git_*.tar.gz
+openocd-git-*.ddeb
 
