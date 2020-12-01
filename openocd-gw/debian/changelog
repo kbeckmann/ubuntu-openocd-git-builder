@@ -1,0 +1,5 @@
+openocd-gw (0.10.0-0) focal; urgency=medium
+
+  * openocd 0.10.0
+
+ -- Franz Levin <frazz@kryo.se>  Tue, 1 Dec 2020 20:38:31 +0200
