@@ -15,3 +15,4 @@ sudo apt-get -y -f install
 
 Now you can execute openocd using `/opt/openocd-git/bin/openocd`.
 
+
