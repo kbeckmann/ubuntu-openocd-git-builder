@@ -8,6 +8,7 @@ all: | openocd
 openocd:
 	git clone https://repo.or.cz/openocd.git openocd
 	cd openocd
+	cd openocd; patch -p1 < ../stm32h7x-enable-access-to-undocumented-Flash.patch
 
 install:
 	$(MAKE) -C openocd install

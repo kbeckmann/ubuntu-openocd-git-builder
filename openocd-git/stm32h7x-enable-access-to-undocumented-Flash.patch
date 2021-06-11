@@ -1,0 +1,29 @@
+From ef80fd6be61004b575053c40d29adb21e3579c8a Mon Sep 17 00:00:00 2001
+From: Christian Unhold <c.unhold@gmail.com>
+Date: Wed, 19 May 2021 11:58:20 +0200
+Subject: [PATCH] stm32h7x: enable access to undocumented Flash
+
+Change-Id: Ic3621e5202a92d2ac9b39877335dd95bd3ee744f
+Signed-off-by: Christian Unhold <c.unhold@gmail.com>
+---
+ src/flash/nor/stm32h7x.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/flash/nor/stm32h7x.c b/src/flash/nor/stm32h7x.c
+index 52e3e0e87..785718fab 100644
+--- a/src/flash/nor/stm32h7x.c
++++ b/src/flash/nor/stm32h7x.c
+@@ -841,8 +841,8 @@ static int stm32x_probe(struct flash_bank *bank)
+ 	} else {
+ 		LOG_INFO("STM32H7 flash has a single bank");
+ 		if (bank->base == bank2_base) {
+-			LOG_ERROR("this device has a single bank only");
+-			return ERROR_FAIL;
++			LOG_WARNING("the second bank of this device is undocumented");
++			has_dual_bank = true;
+ 		} else if (bank->base != bank1_base) {
+ 			LOG_ERROR("STM32H7 flash bank base address config is incorrect. "
+ 					TARGET_ADDR_FMT " but should be 0x%" PRIx32,
+-- 
+2.25.1
+
