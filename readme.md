@@ -7,7 +7,7 @@ It installs into `/opt/openocd-git`, so you don't have to worry about conflicts 
 To install this artifact, do the following:
 
 ```
-wget https://nightly.link/kbeckmann/ubuntu-openocd-git-builder/workflows/docker/master/openocd-git.deb.zip
+wget https://nightly.link/unhold/ubuntu-openocd-git-builder/workflows/docker/master/openocd-git.deb.zip
 unzip openocd-git.deb.zip
 sudo dpkg -i openocd-git_*_amd64.deb
 sudo apt-get -y -f install
