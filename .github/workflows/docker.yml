@@ -3,7 +3,7 @@ name: Builder
 on:
   push:
     branches:
-      - master
+      - stm32h7_extra_flash
   schedule:
     - cron: "0 2 * * *"
 
