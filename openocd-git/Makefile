@@ -7,8 +7,7 @@ all: | openocd
 
 openocd:
 	git clone https://repo.or.cz/openocd.git openocd
-	cd openocd
-	patch -p1 < ../0001-Extend-bank1-and-enable-bank2-of-STM32H7B0VBTx.patch
+	cd openocd; patch -p1 < ../../0001-Extend-bank1-and-enable-bank2-of-STM32H7B0VBTx.patch
 
 install:
 	$(MAKE) -C openocd install
