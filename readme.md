@@ -16,3 +16,23 @@ sudo apt-get -y -f install
 Now you can execute openocd using `/opt/openocd-git/bin/openocd`.
 
 
+# Build from source (linux)
+```
+./build.sh
+sudo dpkg -i openocd-git_*_armhf.deb
+sudo apt-get -y -f install
+```
+
+# MacOS
+```
+brew install texinfo
+export PATH=/usr/local/opt/texinfo/bin:$PATH
+
+cd openocd-git
+make mac
+
+cd openocd
+sudo make install
+# Run and add this to your ~/.zshrc file
+export PATH=/opt/openocd-git/bin:$PATH
+```
