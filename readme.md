@@ -16,7 +16,9 @@ sudo apt-get -y -f install
 Now you can execute openocd using `/opt/openocd-git/bin/openocd`.
 
 
-# Build from source (linux)
+# Build from source (ARM linux)
+For ARM-based linux machines (like raspberry pi), you cannot use the prebuilt artifact described above. You can build and install from source by running the following commands.
+
 ```
 ./build.sh
 sudo dpkg -i openocd-git_*_armhf.deb
