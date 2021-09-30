@@ -16,3 +16,25 @@ sudo apt-get -y -f install
 Now you can execute openocd using `/opt/openocd-git/bin/openocd`.
 
 
+# Build from source (ARM linux)
+For ARM-based linux machines (like raspberry pi), you cannot use the prebuilt artifact described above. You can build and install from source by running the following commands.
+
+```
+./build.sh
+sudo dpkg -i openocd-git_*_armhf.deb
+sudo apt-get -y -f install
+```
+
+# MacOS
+```
+brew install texinfo
+export PATH=/usr/local/opt/texinfo/bin:$PATH
+
+cd openocd-git
+make mac
+
+cd openocd
+sudo make install
+# Run and add this to your ~/.zshrc file
+export PATH=/opt/openocd-git/bin:$PATH
+```
