@@ -38,3 +38,4 @@ sudo make install
 # Run and add this to your ~/.zshrc file
 export PATH=/opt/openocd-git/bin:$PATH
 ```
+
