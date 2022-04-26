@@ -39,3 +39,4 @@ sudo make install
 export PATH=/opt/openocd-git/bin:$PATH
 ```
 
+
