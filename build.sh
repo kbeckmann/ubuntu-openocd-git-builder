@@ -8,7 +8,7 @@ sudo apt-get install -y \
     build-essential debhelper devscripts equivs \
     debhelper git texinfo pkg-config \
     libusb-dev libusb-1.0-0-dev libusb-dev libhidapi-dev libftdi-dev libftdi1-dev \
-    libusb-0.1-4 libusb-1.0-0 libftdi1 libftdi1-2 libhidapi-hidraw0
+    libusb-0.1-4 libusb-1.0-0 libftdi1 libftdi1-2 libhidapi-hidraw0 libjaylink-dev
 
 cd openocd-git
 
