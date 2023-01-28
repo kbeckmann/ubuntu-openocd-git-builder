@@ -2,7 +2,7 @@ PREFIX=/opt/openocd-git
 
 all: | openocd
 	cd openocd; ./bootstrap
-	cd openocd; CCACHE=none ./configure --prefix=$(PREFIX) --enable-maintainer-mode --disable-werror $(shell bash ./features.sh)
+	cd openocd; CCACHE=none ./configure --prefix=$(PREFIX) --enable-maintainer-mode --disable-werror --enable-internal-libjaylink $(shell bash ./features.sh)
 	$(MAKE) -C openocd
 
 mac: | openocd
@@ -11,7 +11,7 @@ mac: | openocd
 	$(MAKE) -C openocd
 
 openocd:
-	git clone https://repo.or.cz/openocd.git openocd
+	git clone --recurse-submodules https://repo.or.cz/openocd.git openocd
 	cd openocd; patch -p1 < ../../0001-Extend-bank1-and-enable-bank2-of-STM32H7B0VBTx.patch
 
 install:
