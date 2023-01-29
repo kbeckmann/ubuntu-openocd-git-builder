@@ -7,7 +7,7 @@ all: | openocd
 
 mac: | openocd
 	cd openocd; ./bootstrap
-	cd openocd; CCACHE=none ./configure --prefix=$(PREFIX) --enable-maintainer-mode --disable-werror --disable-parport --disable-parport-ppdev --disable-doxygen-html $(shell bash ./features_mac.sh)
+	cd openocd; CCACHE=none ./configure --prefix=$(PREFIX) --enable-maintainer-mode --disable-werror --enable-internal-libjaylink --disable-parport --disable-parport-ppdev --disable-doxygen-html $(shell bash ./features_mac.sh)
 	$(MAKE) -C openocd
 
 openocd:
