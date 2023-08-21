@@ -27,7 +27,7 @@ sudo apt-get -y -f install
 
 # MacOS
 ```
-brew install texinfo
+brew install texinfo automake libusb-compat hidapi
 export PATH=/usr/local/opt/texinfo/bin:$PATH
 
 cd openocd-git
