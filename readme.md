@@ -25,6 +25,7 @@ sudo dpkg -i openocd-git_*_armhf.deb
 sudo apt-get -y -f install
 ```
 
+
 # MacOS
 ```
 brew install texinfo automake libusb-compat hidapi
