@@ -1,3 +1,11 @@
+# This repository is archived.
+
+Please fork and maintain it if you need it.
+
+
+-------------------
+
+
 # Nightly openocd-git build for Ubuntu 20.04
 
 This repository uses github actions to build openocd from the master branch each night.
